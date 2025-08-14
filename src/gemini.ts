@@ -13,8 +13,6 @@ export class impl implements provider.Provider {
         const headers = new Headers(request.headers)
         headers.set('x-goog-api-key', apiKey)
         headers.set('Content-Type', 'application/json')
-
-        headers.delete('authorization')
         
         return new Request(finalUrl, {
             method: 'POST',
